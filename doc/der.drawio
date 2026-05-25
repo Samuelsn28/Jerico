@@ -10,6 +10,9 @@
         <mxCell id="7BcWjhotMDsdininURao-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Usuário" vertex="1">
           <mxGeometry height="60" width="120" x="140" y="110" as="geometry" />
         </mxCell>
+        <mxCell id="7BcWjhotMDsdininURao-7" edge="1" parent="1" source="7BcWjhotMDsdininURao-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="7BcWjhotMDsdininURao-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="7BcWjhotMDsdininURao-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Senha" vertex="1">
           <mxGeometry height="60" width="120" x="530" y="110" as="geometry" />
         </mxCell>
