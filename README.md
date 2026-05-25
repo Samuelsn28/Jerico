@@ -1,2 +1,3 @@
-# Jeric-
-Web password manager system
+# Jericó Password Managenment
+
+Web password manager system for you better managenment your passwords.
