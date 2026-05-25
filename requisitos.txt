@@ -1,0 +1,14 @@
+
+Requisitos funcionais
+- Contas
+- Login
+- Gerenciamento de senhas e contas de diferentes plataformas
+- Capacidade de consultar, editar e excluir essas informações
+- Visualizar senhas cadastradas pelo usuário
+
+Requisitos não funcionais
+- Login
+- Criação de contas
+- Segurança (essencial)
+
+
