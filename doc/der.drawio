@@ -109,7 +109,7 @@
             <mxRectangle height="30" width="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-26" parent="PNgv2H9MSMbU7us2dBCM-24" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="url varchar(120) not null" vertex="1">
+        <mxCell id="PNgv2H9MSMbU7us2dBCM-26" parent="PNgv2H9MSMbU7us2dBCM-24" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="url varchar(120)" vertex="1">
           <mxGeometry height="30" width="190" x="60" as="geometry">
             <mxRectangle height="30" width="190" as="alternateBounds" />
           </mxGeometry>
@@ -122,7 +122,7 @@
             <mxRectangle height="30" width="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-49" parent="PNgv2H9MSMbU7us2dBCM-47" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="email_conta varchar(90) not null" vertex="1">
+        <mxCell id="PNgv2H9MSMbU7us2dBCM-49" parent="PNgv2H9MSMbU7us2dBCM-47" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="email_conta varchar(90)" vertex="1">
           <mxGeometry height="30" width="190" x="60" as="geometry">
             <mxRectangle height="30" width="190" as="alternateBounds" />
           </mxGeometry>
@@ -135,7 +135,7 @@
             <mxRectangle height="30" width="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-52" parent="PNgv2H9MSMbU7us2dBCM-50" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="login varchar(90) not null" vertex="1">
+        <mxCell id="PNgv2H9MSMbU7us2dBCM-52" parent="PNgv2H9MSMbU7us2dBCM-50" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="login varchar(90)" vertex="1">
           <mxGeometry height="30" width="190" x="60" as="geometry">
             <mxRectangle height="30" width="190" as="alternateBounds" />
           </mxGeometry>
@@ -148,7 +148,7 @@
             <mxRectangle height="30" width="60" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-55" parent="PNgv2H9MSMbU7us2dBCM-53" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="senha varchar(?) not null" vertex="1">
+        <mxCell id="PNgv2H9MSMbU7us2dBCM-55" parent="PNgv2H9MSMbU7us2dBCM-53" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;html=1;whiteSpace=wrap;" value="senha text not null" vertex="1">
           <mxGeometry height="30" width="190" x="60" as="geometry">
             <mxRectangle height="30" width="190" as="alternateBounds" />
           </mxGeometry>
@@ -166,20 +166,14 @@
             <mxRectangle height="30" width="190" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-29" edge="1" parent="1" source="PNgv2H9MSMbU7us2dBCM-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="PNgv2H9MSMbU7us2dBCM-18">
+        <mxCell id="PNgv2H9MSMbU7us2dBCM-29" edge="1" parent="1" source="PNgv2H9MSMbU7us2dBCM-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=ERoneToMany;endFill=0;" target="PNgv2H9MSMbU7us2dBCM-18">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PNgv2H9MSMbU7us2dBCM-27" parent="1" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" value="Cadastra" vertex="1">
           <mxGeometry height="60" width="120" x="354" y="235" as="geometry" />
         </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-28" edge="1" parent="1" source="PNgv2H9MSMbU7us2dBCM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="PNgv2H9MSMbU7us2dBCM-27">
+        <mxCell id="PNgv2H9MSMbU7us2dBCM-28" edge="1" parent="1" source="PNgv2H9MSMbU7us2dBCM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=ERmandOne;startFill=0;" target="PNgv2H9MSMbU7us2dBCM-27">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="(1,n)" vertex="1">
-          <mxGeometry height="30" width="60" x="220" y="210" as="geometry" />
-        </mxCell>
-        <mxCell id="PNgv2H9MSMbU7us2dBCM-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="(1,1)" vertex="1">
-          <mxGeometry height="30" width="60" x="500" y="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
