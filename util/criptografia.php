@@ -1,7 +1,10 @@
 <?php
 	
-	function hash_sha512($string): string {
-		return hash("sha512", $string);
+	function hashing_senha($string): string {
+		$opcoes = [
+			"cost" => 13,
+		];
+		return password_hash($string, PASSWORD_DEFAULT, $opcoes);
 	}
 
 ?>

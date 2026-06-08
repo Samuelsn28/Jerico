@@ -10,12 +10,10 @@
 		global $conexao;
 		global $stmt_cria_usuario;
 
-		$hashSenha = hash_sha512($senha);
+		$hashSenha = hashing_senha($senha);
 
 		mysqli_stmt_bind_param($stmt_cria_usuario, "sss", $nome, $email, $hashSenha);
 		mysqli_stmt_execute($stmt_cria_usuario);
-
-
 	}
 
 
