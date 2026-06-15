@@ -1,12 +1,12 @@
 <?php
 
 class Usuario {
-	public int $id_user;
+	public int $id;
 	public string $nome;
 	public string $email;
 	public string $senha;
 
-	
+
 }
 
 
