@@ -51,7 +51,7 @@
 		global $conexao;
 		global $stmt_pega_contas;
 
-		mysqli_stmt_bind_param($stmt_pega_contas, "s", $id_usuario);
+		mysqli_stmt_bind_param($stmt_pega_contas, "i", $id_usuario);
 		mysqli_stmt_execute($stmt_pega_contas);
 
 		$contas = [];
@@ -63,7 +63,7 @@
 		return $contas;
 	}
 
-		function pega_conta_especifica($id_usuario, $id_conta): Conta {
+	function pega_conta_especifica($id_usuario, $id_conta): Conta {
 		global $conexao;
 		global $stmt_pega_conta_especifica;
 

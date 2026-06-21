@@ -1,12 +1,14 @@
 <?php
 
+session_set_cookie_params(["httponly" => true]);
+session_start();
+
+$_SESSION["id_usuario"] = 3;
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/database/conexao.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/database/banco.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/modelo/conta.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/modelo/usuario.php");
-
-session_start();
 
 // Proteção de acesso
 if (!isset($_SESSION['id_usuario']) || empty($_SESSION['id_usuario'])) {

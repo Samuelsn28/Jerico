@@ -1,7 +1,7 @@
 <?php
-	$ip = "localhost";
+	$ip = "bd";
 	$usuario = "root";
-	$senha = "Mar1103An2009";
+	$senha = "simsimsim";
 	$banco = "jerico_bd";
 
 	$conexao = mysqli_connect($ip, $usuario, $senha, $banco) or die("<h1>Erro ao conectar com o banco de dados.</h1>");

@@ -1,10 +1,8 @@
-  :root {
+        :root {
             --primary: #6B46C1;
             --dark: #2D1B69;
             --accent: #3B82F6;
         }
-        
-    
         
         body {
            
