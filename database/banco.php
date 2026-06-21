@@ -9,7 +9,6 @@
 
 	$stmt_cria_usuario = mysqli_prepare($conexao, "INSERT INTO $tabelaUsuarios (id, nome, email, senha) VALUES (0, ?, ?, ?)");
 	$stmt_pega_usuario = mysqli_prepare($conexao, "SELECT * FROM $tabelaUsuarios WHERE email=? LIMIT 1");
-	$stmt_pega_conta_especifica = mysqli_prepare($conexao, "SELECT * FROM $tabelaContas WHERE id_usuario=? AND id=?");
 	$stmt_pega_contas = mysqli_prepare($conexao, "SELECT * FROM $tabelaContas WHERE id_usuario=?");
 	$stmt_cria_conta = mysqli_prepare($conexao, "INSERT INTO $tabelaContas (id, id_usuario, plataforma, url, email_conta, login, senha, observacoes) VALUES (0, ?, ?, ?, ?, ?, ?, ?)");
 	$stmt_atualiza_conta = mysqli_prepare($conexao, "UPDATE $tabelaContas SET plataforma=?, url=?, email_conta=?, login=?, senha=?, observacoes=? WHERE id=?");
@@ -25,7 +24,7 @@
 		mysqli_stmt_execute($stmt_cria_usuario);
 	}
 
-	function pega_usuario($email): Usuario {
+	function pega_usuario($email): ?Usuario {
 		global $conexao;
 		global $stmt_pega_usuario;
 
@@ -52,7 +51,7 @@
 		global $conexao;
 		global $stmt_pega_contas;
 
-		mysqli_stmt_bind_param($stmt_pega_contas, "i", $id_usuario);
+		mysqli_stmt_bind_param($stmt_pega_contas, "s", $id_usuario);
 		mysqli_stmt_execute($stmt_pega_contas);
 
 		$contas = [];
@@ -64,7 +63,7 @@
 		return $contas;
 	}
 
-	function pega_conta_especifica($id_usuario, $id_conta): Conta {
+		function pega_conta_especifica($id_usuario, $id_conta): Conta {
 		global $conexao;
 		global $stmt_pega_conta_especifica;
 

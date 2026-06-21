@@ -1,0 +1,270 @@
+body {
+    background: linear-gradient(to right, #100562 21%, #302257 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img form";
+    justify-items: center;
+    overflow: hidden;
+    color: white;
+
+    
+    font-family: 'Aclonica', sans-serif;
+
+
+
+
+
+
+}
+
+html,
+body {
+    height: 115%;
+    
+}
+
+.imagem,
+figure,
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+  margin-right: 50px;
+ margin-top: -5px;
+    
+}
+
+
+
+.titulo {
+    margin-top: 15vh;
+    background: linear-gradient(90deg, #8B35FF 0%, #5E1AE2 50%, #2752d1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    color: transparent;
+    text-shadow: 1px 2px 1px rgba(0, 0.5, 0, 0.1    );
+    font-size: clamp(1.4rem, 4vw + 1rem, 2.5rem);
+}
+
+
+
+form {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 110%;
+    grid-area: form;
+
+
+
+}
+
+.imagem {
+    grid-area: img;
+}
+
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+input {
+    width: 90%;
+    height: 45px;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    border: 3.5px solid transparent;
+    background-origin: padding-box;
+    background-clip: padding-box;
+
+
+
+
+
+}
+
+
+
+input[type="submit"] {
+    margin-top: 1.8vh;
+    background: linear-gradient(90deg, #001AFF 0%, #5f0a70 100%);
+    color: #F2F2F2;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: 3.5px solid transparent;
+    background-origin: padding-box;
+    background-clip: padding-box;
+      width: 93%
+
+
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+
+    background-image:
+        linear-gradient(white, white),
+        linear-gradient(to right, #9205ff, #3c00ff);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible {
+    transform: scale(1.05);
+
+    background-image:
+        linear-gradient(90deg, #001AFF 0%, #8807d2 100%),
+         linear-gradient(to right, #9205ff, #3c00ff);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    outline: none;
+    border-radius: 10px;
+    font-size: bold;
+    color: #260563;
+    text-shadow:
+        0 0 45px #a855f7,
+        0 0 15px #a855f7,
+        0 0 30px #a855f7;
+
+}
+
+
+
+a:focus-visible,
+a:hover {
+    outline: none;
+    background: linear-gradient(to right, #5509b7 20%, #46a4fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+
+
+.texto-botao {
+    color: #B1AFFF;
+    margin: 2% 0 0 24%;
+}
+
+
+
+.olho {
+
+    position: absolute;
+    z-index: 10;
+    width: auto;
+    height: auto;
+    left: 21.2rem;
+    top: 2.8rem;
+    transition: all 0.15s ease-in-out;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+}
+
+
+.olho:focus-visible {
+    outline: none;
+    border: solid 2px;
+    padding: 1px;
+    border-image: linear-gradient(90deg, #0921f9 0%, #4408bb 100%) 1;
+}
+
+
+
+.mudar-olho {
+    opacity: 0;
+}
+
+a {
+    text-decoration: underline #46277D;
+    color: #B1AFFF;
+    transition: all 200ms ease-in-out;
+
+}
+
+a:hover {
+    border-bottom: 2px solid #46277D;
+    text-decoration: none;
+
+
+}
+
+@media (max-width: 720px) {
+    body {
+        grid-template-columns: 1fr;
+        /* Força virar uma coluna só */
+        grid-template-areas:
+            "img"
+            "form";
+
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        overflow-y: scroll;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .imagem {
+        height: 35vh;
+        width: 100%;
+        grid-area: img;
+
+
+    }
+
+    .formulario {
+
+        padding: 30px 20px;
+        width: 100%;
+        text-align: center;
+
+        grid-area: form;
+
+
+    }
+
+
+    .texto-botao {
+
+        margin: 2% 0 0 1%;
+    }
+
+
+    .olho {
+        position: absolute;
+
+        left: 80%;
+        transform: none;
+
+
+    }
+
+
+    .titulo {
+        margin-top: 0;
+    }
+}

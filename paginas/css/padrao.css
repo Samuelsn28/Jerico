@@ -5,6 +5,16 @@
 }
 
 * {
-	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
+
+   body {
+           
+            background: linear-gradient(135deg, #1A0F4D 0%, #2D1B69 100%);
+            color: #E0E7FF;
+            min-height: 100vh;
+            display: flex;
+        }

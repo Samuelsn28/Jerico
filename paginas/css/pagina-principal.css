@@ -1,0 +1,178 @@
+  :root {
+            --primary: #6B46C1;
+            --dark: #2D1B69;
+            --accent: #3B82F6;
+        }
+        
+    
+        
+        body {
+           
+            background: linear-gradient(135deg, #1A0F4D 0%, #2D1B69 100%);
+            color: #E0E7FF;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: rgba(28, 12, 80, 0.97);
+            border-right: 1px solid rgba(155, 122, 234, 0.3);
+            padding: 2rem 1.5rem;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .logo {
+            
+            margin-bottom: 3rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-item {
+            padding: 14px 20px;
+            margin-bottom: 8px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #C4C9FF;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-item.active,
+        .nav-item:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(8px);
+        }
+
+        .main {
+            margin-left: 280px;
+            flex: 1;
+            padding: 2.5rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #e5e9f8, #C4C9FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nova {
+            background: linear-gradient(90deg, #22C55E, #4ADE80);
+            color: #0F172A;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .contas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .conta-card {
+            background: #281761bf;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #7957c759;
+            transition: all 0.3s;
+        }
+
+        .conta-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px #430ec1ca;
+        }
+
+        .card-header {
+            background: linear-gradient(90deg, #521cb0, #2f2aca);
+            padding: 1.4rem 1.7rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .platform {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .card-body {
+            padding: 1.7rem;
+        }
+
+        .field {
+            margin-bottom: 1.4rem;
+        }
+
+        .field-label {
+            font-size: 0.9rem;
+            color: #A5B4FC;
+            margin-bottom: 8px;
+        }
+
+        .field-value {
+            background: rgba(30, 20, 70, 0.9);
+            padding: 14px 16px;
+            border-radius: 10px;
+            font-family: monospace;
+            color: #E0E7FF;
+            border: 1px solid rgba(155, 122, 234, 0.25);
+            word-break: break-all;
+        }
+
+        .senha-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mostrar {
+            background: #0e3573;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .acoes {
+            padding: 1.2rem 1.7rem;
+            background: rgba(0,0,0,0.25);
+            display: flex;
+            gap: 13px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn-edit { background: #3026ee; color: white; }
+        .btn-delete { background: rgb(136, 5, 31); color: white; }
