@@ -1,0 +1,19 @@
+
+Usuário
+- id
+- Nome
+- E-mail
+- Senha
+
+Conta
+- id 
+- id do usuário a qual pertence
+- Plataforma 
+- URL da plataforma
+- E-mail da conta
+- Login (ex.: nome de usuário) da conta
+- Senha da conta (criptografada)
+- Observações em relação à conta
+
+Relacionamento: Usuário cadastra várias ou nenhuma conta
+
