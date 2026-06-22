@@ -27,6 +27,22 @@ $contas = pega_contas($id_usuario);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="./css/padrao.css">
     <link rel="stylesheet" href="./css/pagina-principal.css">
+    <style>
+        .nav-menu {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #logo {
+            flex: 1;
+        }
+
+        #logo > img {
+            width: 100%;
+            background: transparent;
+        }
+    </style>
 </head>
 <body>
 
@@ -46,6 +62,9 @@ $contas = pega_contas($id_usuario);
             <li class="nav-item" onclick="location.href='sair.php'">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Sair</span>
+            </li>
+            <li id="logo">
+                <img src="img/logo.png">
             </li>
         </ul>
     </section>
