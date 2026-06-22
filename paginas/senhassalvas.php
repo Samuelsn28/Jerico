@@ -79,13 +79,16 @@ $contas = pega_contas($id_usuario);
                         <?php endif; ?>
                     </section>
                     
+
                     <section class="card-body">
+                        <?php if (!empty($conta->email_conta)): ?>
                         <section class="field">
                             <section class="field-label">E-mail</section>
                             <section class="field-value">
                                 <?= htmlspecialchars($conta->email_conta ?: $conta->login ?? 'Não informado') ?>
                             </section>
                         </section>
+                        <?php endif; ?>
 
                         <section class="field">
                             <section class="field-label">Senha</section>

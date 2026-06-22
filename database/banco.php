@@ -10,12 +10,13 @@
 	$stmt_cria_usuario = mysqli_prepare($conexao, "INSERT INTO $tabelaUsuarios (id, nome, email, senha) VALUES (0, ?, ?, ?)");
 	$stmt_pega_usuario = mysqli_prepare($conexao, "SELECT * FROM $tabelaUsuarios WHERE email=? LIMIT 1");
 	$stmt_pega_contas = mysqli_prepare($conexao, "SELECT * FROM $tabelaContas WHERE id_usuario=?");
+	$stmt_pega_conta_especifica = mysqli_prepare($conexao, "SELECT * FROM $tabelaContas WHERE id_usuario=? AND id=?");
 	$stmt_cria_conta = mysqli_prepare($conexao, "INSERT INTO $tabelaContas (id, id_usuario, plataforma, url, email_conta, login, senha, observacoes) VALUES (0, ?, ?, ?, ?, ?, ?, ?)");
 	$stmt_atualiza_conta = mysqli_prepare($conexao, "UPDATE $tabelaContas SET plataforma=?, url=?, email_conta=?, login=?, senha=?, observacoes=? WHERE id=?");
 	$stmt_deleta_conta = mysqli_prepare($conexao, "DELETE FROM $tabelaContas WHERE id=?");
 
-	function cria_usuario($nome, $email, $senha) {
-		global $conexao;
+	function cria_usuario($nome, $email, $senha) 
+{		global $conexao;
 		global $stmt_cria_usuario;
 
 		$hashSenha = hashing_senha($senha);
@@ -89,17 +90,17 @@
 		mysqli_stmt_bind_param($stmt_atualiza_conta, "ssssssi", $contaAtualizada->plataforma, $contaAtualizada->url, $contaAtualizada->email_conta, $contaAtualizada->login, $contaAtualizada->senha, $contaAtualizada->observacoes, $id_conta);
 		mysqli_stmt_execute($stmt_atualiza_conta);
 
-		return mysqli_affected_rows();
+		return mysqli_affected_rows($conexao);
 	}
 
 	function deleta_conta($id_conta): int {
 		global $conexao;
-		global $stmt_atualiza_conta;
+		global $stmt_deleta_conta;
 
 		mysqli_stmt_bind_param($stmt_deleta_conta, "i", $id_conta);
 		mysqli_stmt_execute($stmt_deleta_conta);
 
-		return mysqli_affected_rows();
+		return mysqli_affected_rows($conexao);
 	}
 
 
