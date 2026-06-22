@@ -1,5 +1,7 @@
 <?php
-// login.php
+
+session_set_cookie_params(["httponly" => true]);
+session_start();
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/database/conexao.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/database/banco.php");
@@ -25,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['nome'] = $usuario->nome;
             $_SESSION['email'] = $usuario->email;
 
-            header("Location: senhassalvas.php");
+            echo "<script> window.location.href='senhassalvas.php'; </script>";
             exit();
         } 
         elseif ($resultado === false) {

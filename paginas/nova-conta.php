@@ -10,7 +10,8 @@ include_once($_SERVER['DOCUMENT_ROOT'] . "/modelo/conta.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/modelo/usuario.php");
 
 if (!isset($_SESSION['id_usuario']) || empty($_SESSION['id_usuario'])) {
-    header("Location: ../login.php");
+
+    echo "<script> window.location.href='../login.php'; </script>";
     exit();
 }
 
@@ -41,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         cria_conta($novaConta);
         
         // Redireciona após sucesso (evita reenvio ao atualizar)
-        header("Location: nova-conta.php?sucesso=1");
+        echo "<script> window.location.href='nova-conta.php?sucesso=1'; </script>";
         exit();
     }
 }
