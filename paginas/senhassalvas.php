@@ -3,8 +3,6 @@
 session_set_cookie_params(["httponly" => true]);
 session_start();
 
-$_SESSION["id_usuario"] = 3;
-
 require_once($_SERVER['DOCUMENT_ROOT'] . "/database/conexao.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/database/banco.php");
 include_once($_SERVER['DOCUMENT_ROOT'] . "/modelo/conta.php");
@@ -12,11 +10,11 @@ include_once($_SERVER['DOCUMENT_ROOT'] . "/modelo/usuario.php");
 
 // Proteção de acesso
 if (!isset($_SESSION['id_usuario']) || empty($_SESSION['id_usuario'])) {
-    header("Location: ../login.php");
+    header("Location: login.php");
     exit();
 }
 
-$id_usuario = (int)$_SESSION['id_usuario'];
+$id_usuario = (int) $_SESSION['id_usuario'];
 $contas = pega_contas($id_usuario);
 ?>
 
@@ -45,9 +43,9 @@ $contas = pega_contas($id_usuario);
                 <i class="fas fa-plus-circle"></i>
                 <span>Nova Conta</span>
             </li>
-            <li class="nav-item">
-                <i class="fas fa-user-shield"></i>
-                <span>Perfil</span>
+            <li class="nav-item" onclick="location.href='sair.php'">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Sair</span>
             </li>
         </ul>
     </section>

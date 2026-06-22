@@ -5,7 +5,7 @@
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/database/banco.php");
 
 	if (!isset($_SESSION["id"])) {
-		$caminho = "/paginas/login.php";
+		$caminho = "paginas/login.php";
 		echo "<script> window.location.href='$caminho'; </script>";
 		exit();
 	}
