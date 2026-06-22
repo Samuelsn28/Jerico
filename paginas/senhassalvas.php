@@ -59,6 +59,10 @@ $contas = pega_contas($id_usuario);
                 <i class="fas fa-plus-circle"></i>
                 <span>Nova Conta</span>
             </li>
+            <li class="nav-item" onclick="location.href='perfil.php'">
+                <i class="fas fa-user-shield"></i>
+                <span>Perfil</span>
+            </li>
             <li class="nav-item" onclick="location.href='sair.php'">
                 <i class="fas fa-sign-out-alt"></i>
                 <span>Sair</span>
