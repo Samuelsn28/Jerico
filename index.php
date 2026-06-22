@@ -4,10 +4,9 @@
 
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/database/banco.php");
 
-	$_SESSION["id"] = 3;
-
 	if (!isset($_SESSION["id"])) {
-		header("location: " . $_SERVER['DOCUMENT_ROOT'] . "/paginas/login.php");
+		$caminho = "/paginas/login.php";
+		echo "<script> window.location.href='$caminho'; </script>";
 		exit();
 	}
 	
