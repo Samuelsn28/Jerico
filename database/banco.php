@@ -12,6 +12,7 @@
 	$stmt_cria_usuario = mysqli_prepare($conexao, "INSERT INTO $tabelaUsuarios (id, nome, email, senha) VALUES (0, ?, ?, ?)");
 	$stmt_pega_usuario = mysqli_prepare($conexao, "SELECT * FROM $tabelaUsuarios WHERE email=? LIMIT 1");
 	$stmt_pega_usuario_por_id = mysqli_prepare($conexao, "SELECT * FROM $tabelaUsuarios WHERE id=? LIMIT 1");
+	$stmt_excluir_usuario = mysqli_prepare($conexao, "DELETE FROM $tabelaUsuarios WHERE id=?");
 	$stmt_pega_contas = mysqli_prepare($conexao, "SELECT * FROM $tabelaContas WHERE id_usuario=?");
 	$stmt_pega_conta_especifica = mysqli_prepare($conexao, "SELECT * FROM $tabelaContas WHERE id_usuario=? AND id=?");
 	$stmt_cria_conta = mysqli_prepare($conexao, "INSERT INTO $tabelaContas (id, id_usuario, plataforma, url, email_conta, login, senha, observacoes) VALUES (0, ?, ?, ?, ?, ?, ?, ?)");
@@ -63,6 +64,16 @@
 			return null;
 		}
 		return compara_senha_e_hash($senha, $usuario->senha);
+	}
+
+	function exclui_usuario($id) {
+		global $conexao;
+		global $stmt_excluir_usuario;
+
+		mysqli_stmt_bind_param($stmt_excluir_usuario, "i", $id);
+		mysqli_stmt_execute($stmt_excluir_usuario);
+
+		return mysqli_affected_rows($conexao);
 	}
 
 	function pega_contas($id_usuario) {
